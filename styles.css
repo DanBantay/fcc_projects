@@ -1,0 +1,30 @@
+img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: auto%;
+	justify-content: center;
+}
+
+body {
+	background-color: #1e2022;
+}
+
+figcaption {
+	color: #f0f5f9;
+}
+
+#lapuLapu {
+	color: #f0f5f9;
+}
+p {
+	color: #f0f5f9;
+}
+
+li {
+	color: #f0f5f9;
+}
+
+#jumbotron {
+	color: #1e2022;
+}
