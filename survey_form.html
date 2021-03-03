@@ -22,43 +22,66 @@
 				>
 					How's my driving?
 				</h1>
-				<p class="lead text-center">
+				<p class="lead text-center" id="description">
 					Thanks for taking time to help us improve our service!
 				</p>
 			</div>
 		</div>
 		<div class="container p-3 mb-2 bg-secondary border border-dark">
-			<form>
+			<form id="survey-form">
 				<div class="form-group row">
-					<label for="inputName" class="col-sm-2 col-form-label">Name</label>
+					<label for="inputName" class="col-sm-2 col-form-label" id="name-label"
+						>Name</label
+					>
 					<div class="col-sm-10">
-						<input type="name" class="form-control" id="" placeholder="Name" />
+						<input
+							type="text"
+							class="form-control"
+							id="name"
+							placeholder="Name"
+							required
+						/>
 					</div>
 				</div>
+
 				<div class="form-group row">
-					<label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+					<label
+						for="inputEmail3"
+						class="col-sm-2 col-form-label"
+						id="email-label"
+						>Email</label
+					>
 					<div class="col-sm-10">
 						<input
 							type="email"
 							class="form-control"
-							id="inputEmail3"
+							id="email"
 							placeholder="Email"
+							required
 						/>
 					</div>
 				</div>
+
 				<div class="form-group row">
-					<label for="inputAge" class="col-sm-2 col-form-label">Age</label>
+					<label
+						for="inputAge"
+						class="col-sm-2 col-form-label"
+						id="number-label"
+						>Age</label
+					>
 					<div class="col-sm-10">
 						<input
-							type="age"
+							type="number"
 							class="form-control"
-							id=""
+							id="number"
 							placeholder="Optional"
+							min="1"
+							max="15"
 						/>
 					</div>
 				</div>
 				<h5>Describe your current role?</h5>
-				<select class="form-control form-control-md mb-3">
+				<select class="form-control form-control-md mb-3" id="dropdown">
 					<option></option>
 					<option>Full-time</option>
 					<option>Part-time</option>
@@ -66,15 +89,15 @@
 				</select>
 				<h5>Would you recommend FCC to a friend?</h5>
 
-				<div class="checkbox">
-					<label><input type="checkbox" value="" />Definitely</label>
-				</div>
-				<div class="checkbox">
-					<label><input type="checkbox" value="" />Maybe</label>
-				</div>
-				<div class="checkbox disabled">
-					<label><input type="checkbox" value="" disabled />Not sure</label>
-				</div>
+				<div class="radio">
+                    <label><input type="radio" name="user-recommend" value="Yes" checked>Yes</label>
+                  </div>
+                  <div class="radio">
+                    <label><input type="radio" name="user-recommend" value="No">No</label>
+                  </div>
+                  <div class="radio disabled">
+                    <label><input type="radio" name="user-recommend" value="Maybe" disabled>Maybe</label>
+                  </div>
 				<h5>Whats your favorite feature of freeCodeCamp?</h5>
 				<select class="form-control form-control-md">
 					<option></option>
@@ -85,27 +108,60 @@
 				<h5>What would you like to see improved?</h5>
 
 				<div class="checkbox">
-					<label><input type="checkbox" value="" />Front End</label>
+					<label><input type="checkbox" value="Front-End" />Front-End</label>
 				</div>
 				<div class="checkbox">
-					<label><input type="checkbox" value="" />Back end</label>
+					<label><input type="checkbox" value="Back-End" />Back-End</label>
 				</div>
 				<div class="checkbox disabled">
-					<label><input type="checkbox" value="" />Data Visualization</label>
+					<label
+						><input
+							type="checkbox"
+							value="Data-Visualization"
+						/>Data-Visualization</label
+					>
 				</div>
-				<div class="checkbox disabled">
-					<label><input type="checkbox" value="" />Challenges</label>
+				<div class="checkbox">
+					<label><input type="checkbox" value="Challenges" />Challenges</label>
 				</div>
-				<div class="checkbox disabled">
-					<label><input type="checkbox" value="" />Open Source Community</label>
+				<div class="checkbox">
+					<label><input type="checkbox" value="City-Meetups" />City Meetups</label>
 				</div>
-				<div class="checkbox disabled">
-					<label><input type="checkbox" value="" />Additional Courses</label>
+				<div class="checkbox">
+					<label
+						><input type="checkbox" value="Open-Source-Community" />Open Source
+						Community</label
+					>
+				</div>
+				<div class="checkbox">
+					<label
+						><input type="checkbox" value="Additional-Courses" />Additional
+						Courses</label
+					>
+				<div class="checkbox">
+					<label
+						><input type="checkbox" value="Videos" />Videos
+						</label
+					>
+				<div class="checkbox">
+					<label
+						><input type="checkbox" value="Wiki" />Wiki
+						</label
+					>
+				<div class="checkbox">
+					<label
+						><input type="checkbox" value="Forum" />Forum
+						</label
+					>
 					<div class="form-group">
 						<label for="message">Any comments or suggestions?</label>
 						<textarea class="form-control" id="message" rows="3"></textarea>
+                        
 					</div>
 				</div>
+                <div>
+                <button class="btn btn-primary btn-lg" type="submit" id="submit">
+                    <i class="fas fa-user" id="submit"></i> Submit</button></div>
 			</form>
 		</div>
 
